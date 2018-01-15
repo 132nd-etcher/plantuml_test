@@ -11,5 +11,6 @@ class Dwelling {
 class Apartment
 class House
 class CommuneTest
+class Something
 
 @enduml
