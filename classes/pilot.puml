@@ -1,0 +1,40 @@
+@startuml
+
+title Roster
+
+class Pilot {
+  + str: callsign
+  + Wing: wing
+  + bool: belongs_to(Squadron)
+}
+class Squadron {
+  + str: name
+  + add_pilot(Pilot)
+  + remove_pilot(Pilot)
+  
+}
+class Wing {
+  +str: name
+  +list[Squadron]: get_squadrons()
+  +list[Pilot]: get_pilots()
+}
+
+interface ManageSquadron {
+  + {abstract} add_pilots(Pilot)
+  + {abstract} remove_pilots(Pilot)
+}
+
+interface ManageWing {
+  + {abstract} add_squadron(Squadron)
+  + {abstract} remove_squadron(Squadron)
+}
+
+Squadron "1..*" *-right- "1" Wing: belongs to >
+Pilot "0..*" o-right- "1..*" Squadron: is a member of >
+ManageWing <|-- Wing
+ManageSquadron <|--Squadron
+
+(Pilot, Squadron) .. ManageSquadron
+(Wing, Squadron) .. ManageWing
+
+@enduml
