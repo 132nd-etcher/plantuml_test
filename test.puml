@@ -1,6 +1,6 @@
 @startuml
 
-title Classes - Class Diagram
+title Classes - Class Diagram - test
 
 
 class Dwelling {
