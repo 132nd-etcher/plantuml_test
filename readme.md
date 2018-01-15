@@ -1,1 +1,1 @@
-![alternative text](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/132nd-etcher/plantuml_test/master/test.puml?ttt=2)
+![alternative text](http://www.plantuml.com/plantuml/proxy?src=https://github.com/132nd-etcher/plantuml_test/raw/master/classes/pilot.puml?ttt=2)
